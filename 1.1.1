@@ -1,0 +1,32 @@
+#include<stdio.h>
+void main() {
+ int n, key, i, pos;
+    int flag = 0;
+    int arr[100];
+
+    // Read size of the array
+    scanf("%d", &n);
+
+    // Read array elements
+    for (i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Read the element to search
+    scanf("%d", &key);
+
+    // Linear search
+    for (i = 0; i < n; i++) {
+        if (arr[i] == key) {
+            flag = 1;
+            pos = i;
+            break;
+		}
+    
+	}
+	if (flag == 1) {
+		printf("found at position %d\n", pos);
+	} else {
+		printf("%d not found\n", key);
+	}
+}
